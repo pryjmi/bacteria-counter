@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # load the image
-image = cv2.imread("src/img/bacteria_dark.jpg", 0)
+image = cv2.imread("img/bacteria_light_6.jpeg", 0)
 rgb_image = cv2.cvtColor(image, cv2.COLOR_GRAY2RGB)
 
 # histogram equalization
