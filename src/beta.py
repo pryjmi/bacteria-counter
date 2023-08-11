@@ -6,7 +6,7 @@ import cv2
 counter = {}
 
 # load the image
-image_orig = cv2.imread("src/img/bacteria_light.jpg")
+image_orig = cv2.imread("img/bacteria_light_6.jpeg")
 height_orig, width_orig = image_orig.shape[:2]
 
 # output image with contours
