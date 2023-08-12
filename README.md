@@ -1,6 +1,7 @@
 # Bacteria counter
 
 Repository for a code that counts bacteria on Petri dish in a picture.
+![Example image](src/img/bacteria_dark.jpg)
 
 ## Most promising scripts
 - [Gamma](src/gamma.py)
