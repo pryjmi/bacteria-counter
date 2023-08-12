@@ -12,7 +12,7 @@ def main(image_name):
   image = cv2.equalizeHist(image)
 
   # binary thresholding
-  ret, image = cv2.threshold(image, 230, 255, cv2.THRESH_BINARY)
+  ret, image = cv2.threshold(image, 250, 255, cv2.THRESH_BINARY)
 
   # define erosion kernel
   kernel = np.ones((3,3), np.uint8)
@@ -53,6 +53,9 @@ def main(image_name):
 
 image_dir = "img"
 images = os.listdir(image_dir)
-
+"""
 for image in images:
   main(f"{image_dir}/{image}")
+"""
+main("img/bacteria_dark.jpg")
+main("img/bacteria_dark_2.jpg")
