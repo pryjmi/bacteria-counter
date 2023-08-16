@@ -58,6 +58,9 @@ def main(image_name):
 
 image_dir = "img"
 images = os.listdir(image_dir)
-
+"""
 for image in images:
   main(f"{image_dir}/{image}")
+"""
+main("img/bacteria_dark.jpg")
+main("img/bacteria_dark_2.jpg")

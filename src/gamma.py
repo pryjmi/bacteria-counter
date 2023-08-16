@@ -20,6 +20,8 @@ def main(image_name):
   # apply erosion
   thresh = cv2.erode(image, kernel, iterations=0)
 
+  thresh = cv2.dilate(image, kernel, iterations=1)
+
   # find the circles
   circles = cv2.HoughCircles(thresh, cv2.HOUGH_GRADIENT, dp=1.2, minDist=20, param1=50, param2=0.9, minRadius=1, maxRadius=3)
 
@@ -27,10 +29,11 @@ def main(image_name):
 
   if circles is not None:
     circles = np.round(circles[0, :]).astype("int")
-    
+
     for (x,y,r) in circles:
-      cv2.circle(rgb_image, (x,y), r, (0,255,0), 1)
-      count += 1
+      if r <= 8 / 3.14:
+        cv2.circle(rgb_image, (x,y), r, (0,255,0), 1)
+        count += 1
 
   print(count)
 
